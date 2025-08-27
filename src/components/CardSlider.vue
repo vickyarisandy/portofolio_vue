@@ -28,9 +28,14 @@
           <div class="p-4">
             <h3 class="text-xl font-bold mb-2">{{ card.title }}</h3>
             <p class="text-gray-400 mb-3">{{ card.desc }}</p>
-            <button class="px-4 py-2 bg-cyan-600 rounded-lg hover:bg-cyan-500 transition">
+
+            <!-- Tombol Detail dengan router-link -->
+            <router-link
+              :to="{ name: 'ContentDetail', params: { id: idx } }"
+              class="inline-block px-4 py-2 bg-cyan-600 rounded-lg hover:bg-cyan-500 transition"
+            >
               Detail
-            </button>
+            </router-link>
           </div>
         </div>
       </div>

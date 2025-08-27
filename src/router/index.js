@@ -7,6 +7,7 @@ import ServicesPage from '../views/Services.vue'
 import ContactPage from '../views/Contact.vue'
 import KebijakanPage from "../views/KebijakanPage.vue"
 import PrivasiPage from "../views/PrivasiPage.vue"
+import ContentDetailPage from '../views/ContentDetail.vue'
 
 
 const routes = [
@@ -18,6 +19,9 @@ const routes = [
     { path: '/contact', name: 'Contact', component: ContactPage },
     { path: "/kebijakan", name: "Kebijakan", component: KebijakanPage },
   { path: "/privasi", name: "Privasi", component: PrivasiPage },
+   { path: '/content/:id', name: 'ContentDetail', component: ContentDetailPage, props: true },
+
+
 ];
 
 const router = createRouter({
