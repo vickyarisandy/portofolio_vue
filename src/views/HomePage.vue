@@ -1,17 +1,25 @@
 <template>
-  <div class="p-6 text-center">
-    <h1 class="text-3xl font-bold text-blue-600">Hello Vue 3 + Vite + Tailwind 🚀</h1>
-    <p class="mt-2">Go to <router-link to="/about" class="text-red-500 underline">About</router-link></p>
-
-    <div class="mt-4">
-      <button @click="counter.increment" class="px-4 py-2 bg-green-500 text-white rounded">
-        Count: {{ counter.count }}
-      </button>
-    </div>
-  </div>
+  <section 
+    class="text-center py-20 transition-all duration-1000 ease-out"
+    :class="{'opacity-0 blur-sm': !isVisible, 'opacity-100 blur-0': isVisible}"
+  >
+    <h1 class="font-geist text-4xl font-bold mb-4">
+      Selamat Datang di Vue Modern
+    </h1>
+    <p class="font-geist text-gray-400">
+      Ini adalah halaman utama dengan layout full desktop.
+    </p>
+  </section>
 </template>
 
 <script setup>
-import { useCounterStore } from "../stores/counter";
-const counter = useCounterStore();
+import { ref, onMounted } from 'vue'
+
+const isVisible = ref(false)
+
+onMounted(() => {
+  setTimeout(() => {
+    isVisible.value = true
+  }, 100) // kasih delay sedikit biar smooth
+})
 </script>
