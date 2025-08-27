@@ -13,7 +13,7 @@ const menuOpen = ref(false)
     <div class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
       <!-- Logo -->
       <router-link to="/" class="flex items-center gap-2 font-bold text-gray-900 dark:text-white text-lg">
-        ⚡ <span>Vue Modern</span>
+        ⚡ <span>V Porto</span>
       </router-link>
 
       <!-- Desktop Nav -->
