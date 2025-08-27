@@ -25,7 +25,19 @@ const menuOpen = ref(false)
       </nav>
 
       <!-- Actions -->
-      
+       <div class="flex items-center gap-4">
+        <!-- Theme Toggle -->
+        <button @click="toggleTheme" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
+          <span v-if="theme === 'light'">🌙</span>
+          <span v-else>☀️</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button @click="menuOpen = !menuOpen" class="md:hidden p-2">
+          <span v-if="!menuOpen">☰</span>
+          <span v-else>✕</span>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Menu -->
