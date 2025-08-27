@@ -5,6 +5,9 @@ import BlogPage from "../views/BlogPage.vue"; // 👉 Tambah import
 import BlogDetailPage from "../views/BlogDetailPage.vue"; // 👉 Tambah import
 import ServicesPage from '../views/Services.vue'
 import ContactPage from '../views/Contact.vue'
+import KebijakanPage from "../views/KebijakanPage.vue"
+import PrivasiPage from "../views/PrivasiPage.vue"
+
 
 const routes = [
     { path: "/", name: "Home", component: HomePage },
@@ -13,6 +16,8 @@ const routes = [
     { path: "/blog/:id", name: "BlogDetail", component: BlogDetailPage, props: true }, // 👉 route dinamis
     { path: '/services', name: 'Services', component: ServicesPage },
     { path: '/contact', name: 'Contact', component: ContactPage },
+    { path: "/kebijakan", name: "Kebijakan", component: KebijakanPage },
+  { path: "/privasi", name: "Privasi", component: PrivasiPage },
 ];
 
 const router = createRouter({
